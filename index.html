@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIP PADEL — Падел-корты на берегу Москвы-реки | Николина Гора</title>
+    <meta name="description" content="Премиальные падел-корты на берегу Москвы-реки в Николиной Горе. Единственные корты на Рублёво-Успенском шоссе с видом на реку и поле. Бронирование: @dippadel">
+    <meta name="keywords" content="падел, padel, николина гора, рублёвка, москва-река, падел корты, теннис, спорт премиум">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DIP PADEL — Падел-корты на берегу Москвы-реки">
+    <meta property="og:description" content="Премиальные падел-корты в Николиной Горе с панорамным видом на Москву-реку. Профессиональное покрытие, LED-освещение, аренда инвентаря.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dippadel.ru">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="DIP PADEL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DIP PADEL — Падел-корты на берегу Москвы-реки">
+    <meta name="twitter:description" content="Премиальные падел-корты в Николиной Горе. Бронирование онлайн.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://dippadel.ru">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'forest': '#1B3A2D',
+                        'forest-light': '#2A5440',
+                        'forest-dark': '#122A1F',
+                        'sand': '#E8DED1',
+                        'sand-light': '#F0E9DF',
+                        'warm-white': '#FAF8F5',
+                        'charcoal': '#2C2C2C',
+                        'charcoal-light': '#4A4A4A',
+                        'copper': '#B8774E',
+                        'copper-light': '#D4956A',
+                        'copper-dark': '#96603D',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'Georgia', 'serif'],
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ========== BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: #2C2C2C;
+            background: #FAF8F5;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #B8774E;
+            color: #FAF8F5;
+        }
+
+        /* ========== CUSTOM SCROLLBAR ========== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B8774E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #96603D;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .nav-scrolled {
+            background: rgba(27, 58, 45, 0.95) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #B8774E;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ========== HERO ========== */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100dvh;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 120% 60% at 50% 80%, rgba(184, 119, 78, 0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 80% 50% at 70% 60%, rgba(27, 58, 45, 0.3) 0%, transparent 60%),
+                linear-gradient(180deg,
+                    #0a1a12 0%,
+                    #122A1F 15%,
+                    #1B3A2D 30%,
+                    #1e4533 45%,
+                    #2A5440 55%,
+                    #1B3A2D 70%,
+                    #1a3528 80%,
+                    #142b20 90%,
+                    #0d1f16 100%
+                );
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            bottom: 15%;
+            left: -10%;
+            width: 120%;
+            height: 25%;
+            background:
+                repeating-linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(184, 119, 78, 0.03) 10%,
+                    rgba(232, 222, 209, 0.05) 20%,
+                    transparent 30%
+                );
+            animation: river-shimmer 8s ease-in-out infinite;
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            width: 40%;
+            height: 30%;
+            background: radial-gradient(ellipse, rgba(184, 119, 78, 0.08) 0%, transparent 70%);
+            animation: sun-pulse 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes river-shimmer {
+            0%, 100% { transform: translateX(-2%) scaleY(1); opacity: 0.6; }
+            50% { transform: translateX(2%) scaleY(1.1); opacity: 1; }
+        }
+
+        @keyframes sun-pulse {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(232, 222, 209, 0.3);
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+        }
+
+        @keyframes float-particle {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: 0.15em;
+            line-height: 1;
+        }
+
+        .hero-subtitle {
+            letter-spacing: 0.08em;
+        }
+
+        .title-line {
+            width: 80px;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, #B8774E, transparent);
+        }
+
+        /* ========== SCROLL REVEAL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .stagger-children .reveal:nth-child(1) { transition-delay: 0.05s; }
+        .stagger-children .reveal:nth-child(2) { transition-delay: 0.15s; }
+        .stagger-children .reveal:nth-child(3) { transition-delay: 0.25s; }
+        .stagger-children .reveal:nth-child(4) { transition-delay: 0.35s; }
+        .stagger-children .reveal:nth-child(5) { transition-delay: 0.45s; }
+        .stagger-children .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+        /* ========== SECTION STYLES ========== */
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #B8774E;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.15;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 1.5px;
+            background: linear-gradient(90deg, #B8774E, transparent);
+        }
+
+        /* ========== COURT CARDS ========== */
+        .court-card {
+            background: #FAF8F5;
+            border: 1px solid rgba(232, 222, 209, 0.6);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.5s ease;
+        }
+
+        .court-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(27, 58, 45, 0.12);
+            border-color: rgba(184, 119, 78, 0.3);
+        }
+
+        .court-card-visual {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .court-gradient-1 {
+            background: linear-gradient(135deg, #1B3A2D 0%, #2A5440 40%, #3a7a5e 100%);
+        }
+        .court-gradient-2 {
+            background: linear-gradient(135deg, #2A5440 0%, #1B3A2D 50%, #0d1f16 100%);
+        }
+        .court-gradient-3 {
+            background: linear-gradient(135deg, #B8774E 0%, #96603D 40%, #1B3A2D 100%);
+        }
+        .court-gradient-4 {
+            background: linear-gradient(135deg, #1B3A2D 0%, #B8774E 60%, #D4956A 100%);
+        }
+
+        .court-lines {
+            position: absolute;
+            inset: 0;
+            opacity: 0.15;
+        }
+
+        .court-lines::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            width: 70%;
+            height: 60%;
+            border: 2px solid #FAF8F5;
+            border-radius: 2px;
+        }
+
+        .court-lines::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 0;
+            height: 60%;
+            border-left: 2px solid #FAF8F5;
+        }
+
+        .court-net {
+            position: absolute;
+            top: 48%;
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 4px, transparent 4px, transparent 8px);
+        }
+
+        /* ========== FEATURE ICON ========== */
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(27, 58, 45, 0.06);
+            color: #1B3A2D;
+            flex-shrink: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .court-card:hover .feature-icon {
+            background: rgba(184, 119, 78, 0.1);
+            color: #B8774E;
+        }
+
+        /* ========== PRICING TABLE ========== */
+        .price-row {
+            border-bottom: 1px solid rgba(232, 222, 209, 0.5);
+            transition: background 0.3s ease;
+        }
+
+        .price-row:hover {
+            background: rgba(27, 58, 45, 0.03);
+        }
+
+        .price-badge {
+            background: linear-gradient(135deg, #B8774E, #D4956A);
+            color: #FAF8F5;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        /* ========== COACH CARDS ========== */
+        .coach-card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .coach-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(27, 58, 45, 0.1);
+        }
+
+        .coach-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(184, 119, 78, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            transition: border-color 0.3s ease;
+        }
+
+        .coach-card:hover .coach-avatar {
+            border-color: #B8774E;
+        }
+
+        .coach-avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ========== LOCATION ========== */
+        .map-placeholder {
+            background:
+                linear-gradient(135deg, rgba(27, 58, 45, 0.05) 0%, rgba(232, 222, 209, 0.3) 100%);
+            border: 1px solid rgba(232, 222, 209, 0.6);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .map-pin {
+            animation: pin-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes pin-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ========== (removed winter section) ========== */
+        .winter-section-unused {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .winter-bg {
+            background:
+                radial-gradient(ellipse 80% 60% at 30% 50%, rgba(232, 222, 209, 0.15) 0%, transparent 60%),
+                linear-gradient(180deg, #1B3A2D 0%, #122A1F 50%, #0d1f16 100%);
+        }
+
+        .snowflake {
+            position: absolute;
+            color: rgba(232, 222, 209, 0.2);
+            animation: snowfall linear infinite;
+            font-size: 14px;
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* ========== BOOKING FORM ========== */
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1.5px solid rgba(232, 222, 209, 0.8);
+            border-radius: 12px;
+            background: #FAF8F5;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #2C2C2C;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+
+        .form-input:focus {
+            border-color: #B8774E;
+            box-shadow: 0 0 0 4px rgba(184, 119, 78, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #9A9590;
+        }
+
+        .form-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: #4A4A4A;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #B8774E 0%, #D4956A 100%);
+            color: #FAF8F5;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                        background 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #D4956A 0%, #B8774E 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(184, 119, 78, 0.35);
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: transparent;
+            color: #FAF8F5;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            border: 1.5px solid rgba(250, 248, 245, 0.3);
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-outline:hover {
+            background: rgba(250, 248, 245, 0.1);
+            border-color: rgba(250, 248, 245, 0.6);
+        }
+
+        .btn-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: #1B3A2D;
+            color: #FAF8F5;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+
+        .btn-dark:hover {
+            background: #2A5440;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(27, 58, 45, 0.3);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer-link {
+            color: rgba(232, 222, 209, 0.6);
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #B8774E;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(232, 222, 209, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: rgba(232, 222, 209, 0.6);
+        }
+
+        .social-icon:hover {
+            border-color: #B8774E;
+            color: #B8774E;
+            transform: translateY(-3px);
+        }
+
+        /* ========== MOBILE MENU ========== */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(27, 58, 45, 0.98);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-menu a {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.8rem;
+            color: #FAF8F5;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+
+        .mobile-menu.open a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.15s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.2s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.25s; }
+        .mobile-menu.open a:nth-child(5) { transition-delay: 0.3s; }
+        .mobile-menu.open a:nth-child(6) { transition-delay: 0.35s; }
+        .mobile-menu.open a:nth-child(7) { transition-delay: 0.4s; }
+
+        .mobile-menu a:hover {
+            color: #B8774E;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            width: 28px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 110;
+        }
+
+        .hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background: #FAF8F5;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .hamburger span:nth-child(3) { bottom: 0; }
+
+        .hamburger.active span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        /* ========== GEOMETRIC DECORATIONS ========== */
+        .geo-circle {
+            border-radius: 50%;
+            border: 1px solid rgba(184, 119, 78, 0.15);
+        }
+
+        .geo-line {
+            width: 1px;
+            background: linear-gradient(180deg, transparent, rgba(184, 119, 78, 0.2), transparent);
+        }
+
+        /* ========== PARALLAX ========== */
+        .parallax-slow {
+            will-change: transform;
+        }
+
+        /* ========== ABOUT FEATURES ========== */
+        .about-stat {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .about-stat-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1B3A2D;
+            line-height: 1;
+        }
+
+        .about-stat-label {
+            font-size: 0.78rem;
+            color: #4A4A4A;
+            margin-top: 8px;
+            letter-spacing: 0.03em;
+        }
+
+        .count-up {
+            display: inline-block;
+        }
+
+        /* ========== ICE PATTERN ========== */
+        .ice-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(232, 222, 209, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 60% 70%, rgba(232, 222, 209, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 20%, rgba(232, 222, 209, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(232, 222, 209, 0.3) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+
+        /* ========== TELEGRAM PULSE ========== */
+        .tg-pulse {
+            animation: tg-pulse-anim 2s ease-in-out infinite;
+        }
+
+        @keyframes tg-pulse-anim {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(184, 119, 78, 0.3); }
+            50% { box-shadow: 0 0 0 12px rgba(184, 119, 78, 0); }
+        }
+
+        /* ========== HERO ANIMATIONS ========== */
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scrollLine {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(200%); }
+        }
+
+        /* ========== SUCCESS STATE ========== */
+        .btn-success {
+            background: linear-gradient(135deg, #1B3A2D 0%, #2A5440 100%) !important;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem !important;
+                letter-spacing: 0.1em;
+            }
+            .about-stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur transition-all duration-500" style="background: rgba(27, 58, 45, 0);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-copper/40 flex items-center justify-center group-hover:border-copper transition-colors duration-300">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="#B8774E" stroke-width="1.5"/>
+                            <path d="M8 12h8M12 8v8" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-warm-white font-playfair text-lg tracking-widest font-medium">DIP</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="#about" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">О нас</a>
+                    <a href="#courts" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Корты</a>
+                    <a href="#pricing" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Цены</a>
+                    <a href="#coaches" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Тренеры</a>
+                    <a href="#location" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Локация</a>
+                    <a href="#booking" class="btn-primary !py-3 !px-7 !text-xs !tracking-widest">
+                        <span>ЗАБРОНИРОВАТЬ</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <div class="hamburger lg:hidden" id="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobileMenu()">О нас</a>
+        <a href="#courts" onclick="closeMobileMenu()">Корты</a>
+        <a href="#pricing" onclick="closeMobileMenu()">Цены</a>
+        <a href="#coaches" onclick="closeMobileMenu()">Тренеры</a>
+        <a href="#location" onclick="closeMobileMenu()">Локация</a>
+        <a href="#allseason" onclick="closeMobileMenu()">365 дней</a>
+        <a href="#booking" onclick="closeMobileMenu()">Бронирование</a>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="hero-section flex items-center justify-center">
+        <div class="hero-bg" id="heroBg"></div>
+
+        <!-- Particles -->
+        <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+
+        <!-- Geometric decorations -->
+        <div class="absolute top-[15%] left-[8%] w-32 h-32 geo-circle parallax-slow hidden lg:block" data-speed="0.03"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-48 h-48 geo-circle parallax-slow hidden lg:block" data-speed="0.05"></div>
+        <div class="absolute top-[30%] right-[20%] h-40 geo-line parallax-slow hidden lg:block" data-speed="0.02"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <!-- Pre-title label -->
+            <div class="mb-8 opacity-0" style="animation: fadeSlideUp 1s 0.3s forwards;">
+                <span class="inline-flex items-center gap-3 text-copper text-xs tracking-[0.3em] font-inter font-medium uppercase">
+                    <span class="w-8 h-[1px] bg-copper"></span>
+                    Николина Гора
+                    <span class="w-8 h-[1px] bg-copper"></span>
+                </span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="hero-title text-warm-white text-6xl md:text-7xl lg:text-8xl font-bold mb-8 opacity-0" style="animation: fadeSlideUp 1s 0.5s forwards;">
+                DIP PADEL
+            </h1>
+
+            <!-- Decorative line -->
+            <div class="flex justify-center mb-8 opacity-0" style="animation: fadeSlideUp 1s 0.7s forwards;">
+                <div class="title-line"></div>
+            </div>
+
+            <!-- Subtitle -->
+            <p class="hero-subtitle text-warm-white/70 text-base md:text-lg font-light mb-12 max-w-xl mx-auto leading-relaxed opacity-0" style="animation: fadeSlideUp 1s 0.9s forwards;">
+                Падел-корты на берегу Москвы-реки.<br>
+                <span class="text-sand/90">Дипломатический пляж.</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 opacity-0" style="animation: fadeSlideUp 1s 1.1s forwards;">
+                <a href="#booking" class="btn-primary">
+                    <span>Забронировать корт</span>
+                    <span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="position:relative;z-index:1;">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#courts" class="btn-outline">
+                    Узнать больше
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0" style="animation: fadeSlideUp 1s 1.5s forwards;">
+            <span class="text-warm-white/30 text-[0.65rem] tracking-[0.25em] uppercase font-inter">Scroll</span>
+            <div class="w-[1px] h-10 bg-gradient-to-b from-warm-white/30 to-transparent relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1/2 bg-copper" style="animation: scrollLine 2s ease-in-out infinite;"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="py-24 md:py-32 lg:py-40 bg-warm-white relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-20 right-0 w-72 h-72 rounded-full bg-forest/[0.02] -translate-x-1/2 hidden lg:block"></div>
+        <div class="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-copper/[0.03] hidden lg:block"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Left: Text -->
+                <div>
+                    <div class="reveal">
+                        <span class="section-label">О клубе</span>
+                    </div>
+                    <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                        Единственный<br>
+                        <span class="text-forest">падел-клуб</span> на<br>
+                        Рублёвке
+                    </h2>
+                    <div class="section-divider mb-8 reveal"></div>
+                    <p class="text-charcoal-light/80 text-base leading-relaxed mb-6 reveal">
+                        DIP PADEL расположен на территории легендарного Дипломатического пляжа в Николиной Горе -- месте, где природа и история создают неповторимую атмосферу.
+                    </p>
+                    <p class="text-charcoal-light/80 text-base leading-relaxed mb-10 reveal">
+                        Единственные падел-корты на Рублёво-Успенском шоссе с панорамным видом на Москву-реку и заливные луга. Здесь каждая игра становится событием.
+                    </p>
+                    <div class="reveal">
+                        <a href="#courts" class="btn-dark">
+                            Наши корты
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Stats & Visual -->
+                <div class="reveal-right">
+                    <div class="relative bg-sand/40 rounded-3xl p-10 border border-sand">
+                        <!-- Decorative court shape -->
+                        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-forest to-forest-light relative overflow-hidden mb-10">
+                            <div class="absolute inset-6 border border-warm-white/10 rounded-lg"></div>
+                            <div class="absolute top-6 bottom-6 left-1/2 w-[1px] bg-warm-white/10"></div>
+                            <div class="absolute top-1/2 left-6 right-6 h-[1px] -translate-y-1/2" style="background: repeating-linear-gradient(90deg, rgba(250,248,245,0.1) 0px, rgba(250,248,245,0.1) 6px, transparent 6px, transparent 12px);"></div>
+                            <!-- River suggestion -->
+                            <div class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-copper/10 to-transparent"></div>
+                            <!-- Label -->
+                            <div class="absolute bottom-4 right-4 text-warm-white/30 text-[0.6rem] tracking-[0.2em] uppercase font-inter">
+                                Вид на реку
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="about-stat">
+                                <div class="about-stat-number count-up" data-target="4">0</div>
+                                <div class="about-stat-label">Профессиональных<br>корта</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat-number count-up" data-target="25">0</div>
+                                <div class="about-stat-label">Минут<br>от МКАД</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat-number count-up" data-target="365">0</div>
+                                <div class="about-stat-label">Дней<br>в году</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== COURTS ==================== -->
+    <section id="courts" class="py-24 md:py-32 lg:py-40 bg-sand/30 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <span class="section-label reveal">Инфраструктура</span>
+                <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                    Наши <span class="text-forest">корты</span>
+                </h2>
+                <div class="flex justify-center reveal">
+                    <div class="section-divider"></div>
+                </div>
+                <p class="text-charcoal-light/70 text-base mt-8 max-w-xl mx-auto leading-relaxed reveal">
+                    Четыре профессиональных падел-корта с лучшим покрытием и оборудованием мирового класса
+                </p>
+            </div>
+
+            <!-- Courts Grid -->
+            <div class="grid md:grid-cols-2 gap-8 stagger-children">
+                <!-- Court 1 -->
+                <div class="court-card reveal">
+                    <div class="court-card-visual court-gradient-1">
+                        <div class="court-lines"></div>
+                        <div class="court-net"></div>
+                        <div class="absolute bottom-4 left-5 text-warm-white/60 text-[0.6rem] tracking-[0.2em] uppercase font-inter font-medium">Корт 01</div>
+                        <div class="absolute top-4 right-5">
+                            <span class="inline-block bg-warm-white/10 backdrop-blur-sm text-warm-white/80 text-[0.6rem] tracking-wider uppercase px-3 py-1.5 rounded-full font-inter">Panoramic</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Корт &laquo;Река&raquo;</h3>
+                        <p class="text-charcoal-light/60 text-sm mb-5">Панорамный вид на Москву-реку</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <path d="M3 12h18"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Профессиональное покрытие WPT</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <circle cx="12" cy="12" r="5"/>
+                                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">LED-освещение для вечерних игр</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Court 2 -->
+                <div class="court-card reveal">
+                    <div class="court-card-visual court-gradient-2">
+                        <div class="court-lines"></div>
+                        <div class="court-net"></div>
+                        <div class="absolute bottom-4 left-5 text-warm-white/60 text-[0.6rem] tracking-[0.2em] uppercase font-inter font-medium">Корт 02</div>
+                        <div class="absolute top-4 right-5">
+                            <span class="inline-block bg-warm-white/10 backdrop-blur-sm text-warm-white/80 text-[0.6rem] tracking-wider uppercase px-3 py-1.5 rounded-full font-inter">Forest</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Корт &laquo;Лес&raquo;</h3>
+                        <p class="text-charcoal-light/60 text-sm mb-5">В окружении вековых сосен</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Закалённое стекло 12 мм</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Аренда инвентаря включена</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Court 3 -->
+                <div class="court-card reveal">
+                    <div class="court-card-visual court-gradient-3">
+                        <div class="court-lines"></div>
+                        <div class="court-net"></div>
+                        <div class="absolute bottom-4 left-5 text-warm-white/60 text-[0.6rem] tracking-[0.2em] uppercase font-inter font-medium">Корт 03</div>
+                        <div class="absolute top-4 right-5">
+                            <span class="inline-block bg-warm-white/10 backdrop-blur-sm text-warm-white/80 text-[0.6rem] tracking-wider uppercase px-3 py-1.5 rounded-full font-inter">Sunset</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Корт &laquo;Закат&raquo;</h3>
+                        <p class="text-charcoal-light/60 text-sm mb-5">Лучший вид на закат над рекой</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M3 12h1m8-9v1m8 8h1M5.6 5.6l.7.7m12.1-.7-.7.7M8 16a4 4 0 1 1 8 0"/>
+                                        <path d="M3 19h18"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Антибликовое покрытие стен</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Раздевалки и душевые</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Court 4 -->
+                <div class="court-card reveal">
+                    <div class="court-card-visual court-gradient-4">
+                        <div class="court-lines"></div>
+                        <div class="court-net"></div>
+                        <div class="absolute bottom-4 left-5 text-warm-white/60 text-[0.6rem] tracking-[0.2em] uppercase font-inter font-medium">Корт 04</div>
+                        <div class="absolute top-4 right-5">
+                            <span class="inline-block bg-warm-white/10 backdrop-blur-sm text-warm-white/80 text-[0.6rem] tracking-wider uppercase px-3 py-1.5 rounded-full font-inter">VIP</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Корт &laquo;VIP&raquo;</h3>
+                        <p class="text-charcoal-light/60 text-sm mb-5">Приватный корт с лаунж-зоной</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Персональная лаунж-зона</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="feature-icon !w-10 !h-10 !rounded-lg">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-charcoal-light/80">Комплименты от шеф-повара</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== PRICING ==================== -->
+    <section id="pricing" class="py-24 md:py-32 lg:py-40 bg-warm-white relative">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <span class="section-label reveal">Тарифы</span>
+                <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                    Расписание <span class="text-forest">и цены</span>
+                </h2>
+                <div class="flex justify-center reveal">
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="reveal-scale">
+                <div class="bg-white rounded-3xl border border-sand/80 overflow-hidden shadow-[0_4px_40px_rgba(0,0,0,0.04)]">
+                    <!-- Header -->
+                    <div class="bg-forest px-8 md:px-12 py-8">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-playfair text-2xl text-warm-white font-semibold">Аренда корта</h3>
+                                <p class="text-warm-white/50 text-sm mt-1 font-inter">Стоимость за 1 час игры</p>
+                            </div>
+                            <div class="hidden sm:block">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <circle cx="24" cy="24" r="22" stroke="rgba(232,222,209,0.2)" stroke-width="1"/>
+                                    <circle cx="24" cy="24" r="8" stroke="rgba(184,119,78,0.5)" stroke-width="1.5"/>
+                                    <path d="M24 16v16M16 24h16" stroke="rgba(232,222,209,0.15)" stroke-width="1"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Rows -->
+                    <div class="px-8 md:px-12">
+                        <!-- Morning -->
+                        <div class="price-row py-6 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round">
+                                        <circle cx="12" cy="12" r="5"/>
+                                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-charcoal text-[0.95rem]">Утро</div>
+                                    <div class="text-charcoal-light/50 text-sm">7:00 &ndash; 12:00</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-playfair text-2xl md:text-3xl font-bold text-charcoal">3 500</span>
+                                <span class="text-charcoal-light/50 text-sm ml-1">&#8381;/час</span>
+                            </div>
+                        </div>
+
+                        <!-- Afternoon -->
+                        <div class="price-row py-6 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round">
+                                        <circle cx="12" cy="12" r="5"/>
+                                        <path d="M12 3v2M12 19v2M5 12H3M21 12h-2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-charcoal text-[0.95rem]">День</div>
+                                    <div class="text-charcoal-light/50 text-sm">12:00 &ndash; 17:00</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-playfair text-2xl md:text-3xl font-bold text-charcoal">4 500</span>
+                                <span class="text-charcoal-light/50 text-sm ml-1">&#8381;/час</span>
+                            </div>
+                        </div>
+
+                        <!-- Evening -->
+                        <div class="price-row py-6 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-charcoal text-[0.95rem]">Вечер</div>
+                                    <div class="text-charcoal-light/50 text-sm">17:00 &ndash; 22:00</div>
+                                </div>
+                            </div>
+                            <div class="text-right flex items-center gap-3">
+                                <span class="price-badge hidden sm:inline-block">Popular</span>
+                                <div>
+                                    <span class="font-playfair text-2xl md:text-3xl font-bold text-charcoal">5 500</span>
+                                    <span class="text-charcoal-light/50 text-sm ml-1">&#8381;/час</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal training -->
+                        <div class="price-row py-6 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-copper/10 flex items-center justify-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-charcoal text-[0.95rem]">Индивидуальная тренировка</div>
+                                    <div class="text-charcoal-light/50 text-sm">С профессиональным тренером</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-playfair text-2xl md:text-3xl font-bold text-charcoal">7 000</span>
+                                <span class="text-charcoal-light/50 text-sm ml-1">&#8381;/час</span>
+                            </div>
+                        </div>
+
+                        <!-- Subscription -->
+                        <div class="py-6 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                        <path d="M16 2v4M8 2v4M3 10h18"/>
+                                        <path d="M9 16l2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-charcoal text-[0.95rem]">Абонемент 10 часов</div>
+                                    <div class="text-charcoal-light/50 text-sm">Фиксированная скидка на пакет</div>
+                                </div>
+                            </div>
+                            <div class="text-right flex items-center gap-3">
+                                <span class="price-badge">-15%</span>
+                                <div>
+                                    <span class="font-playfair text-lg font-bold text-forest">скидка</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer note -->
+                    <div class="bg-sand/30 px-8 md:px-12 py-5 border-t border-sand/50">
+                        <p class="text-charcoal-light/50 text-xs text-center">
+                            В стоимость включено: аренда инвентаря, раздевалки, парковка. Бронирование от 1 часа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== COACHES ==================== -->
+    <section id="coaches" class="py-24 md:py-32 lg:py-40 bg-sand/30 relative">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <span class="section-label reveal">Команда</span>
+                <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                    Наши <span class="text-forest">тренеры</span>
+                </h2>
+                <div class="flex justify-center reveal">
+                    <div class="section-divider"></div>
+                </div>
+                <p class="text-charcoal-light/70 text-base mt-8 max-w-md mx-auto leading-relaxed reveal">
+                    Сертифицированные тренеры с международным опытом и страстью к падел-теннису
+                </p>
+            </div>
+
+            <!-- Coaches Grid -->
+            <div class="grid md:grid-cols-2 gap-10 stagger-children">
+                <!-- Coach 1 -->
+                <div class="coach-card bg-white border border-sand/60 p-10 text-center reveal">
+                    <div class="coach-avatar mb-6">
+                        <div class="coach-avatar-inner bg-gradient-to-br from-forest to-forest-light">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,0.6)" stroke-width="1.2" stroke-linecap="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Алексей Морозов</h3>
+                    <p class="text-copper text-sm font-medium tracking-wider uppercase mb-4">Head Coach</p>
+                    <p class="text-charcoal-light/60 text-sm leading-relaxed mb-6">
+                        Сертификат FIP Level 2. 8 лет опыта. Бывший профессиональный теннисист, чемпион России по падел-теннису 2024.
+                    </p>
+                    <div class="flex items-center justify-center gap-6 text-charcoal-light/40 text-xs tracking-wider uppercase">
+                        <span class="flex items-center gap-1.5">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            FIP Level 2
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            8 лет
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Coach 2 -->
+                <div class="coach-card bg-white border border-sand/60 p-10 text-center reveal">
+                    <div class="coach-avatar mb-6">
+                        <div class="coach-avatar-inner bg-gradient-to-br from-copper to-copper-dark">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,245,0.6)" stroke-width="1.2" stroke-linecap="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-charcoal mb-1">Мария Соколова</h3>
+                    <p class="text-copper text-sm font-medium tracking-wider uppercase mb-4">Coach &amp; Instructor</p>
+                    <p class="text-charcoal-light/60 text-sm leading-relaxed mb-6">
+                        Сертификат FIP Level 1. 5 лет опыта. Специализация: обучение начинающих, женские группы, детские программы.
+                    </p>
+                    <div class="flex items-center justify-center gap-6 text-charcoal-light/40 text-xs tracking-wider uppercase">
+                        <span class="flex items-center gap-1.5">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            FIP Level 1
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            5 лет
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== LOCATION ==================== -->
+    <section id="location" class="py-24 md:py-32 lg:py-40 bg-warm-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Left: Info -->
+                <div>
+                    <span class="section-label reveal">Как добраться</span>
+                    <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                        <span class="text-forest">Николина</span> Гора
+                    </h2>
+                    <div class="section-divider mb-8 reveal"></div>
+                    <p class="text-charcoal-light/80 text-base leading-relaxed mb-6 reveal">
+                        Дипломатический пляж расположен на берегу Москвы-реки в одном из самых престижных мест Подмосковья &mdash; посёлке Николина Гора на Рублёво-Успенском шоссе.
+                    </p>
+
+                    <div class="space-y-5 mb-10">
+                        <div class="flex items-start gap-4 reveal">
+                            <div class="w-10 h-10 rounded-xl bg-forest/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-charcoal text-sm mb-0.5">Адрес</div>
+                                <div class="text-charcoal-light/60 text-sm">Николина Гора, Дипломатический пляж, Рублёво-Успенское шоссе</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 reveal">
+                            <div class="w-10 h-10 rounded-xl bg-forest/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-charcoal text-sm mb-0.5">Время в пути</div>
+                                <div class="text-charcoal-light/60 text-sm">25 км от МКАД, ~30 минут на автомобиле</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 reveal">
+                            <div class="w-10 h-10 rounded-xl bg-forest/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round">
+                                    <rect x="1" y="3" width="15" height="13" rx="2"/>
+                                    <path d="M16 8h4l3 3v5h-7V8z"/>
+                                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-charcoal text-sm mb-0.5">Парковка</div>
+                                <div class="text-charcoal-light/60 text-sm">Бесплатная охраняемая парковка на территории</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal">
+                        <a href="https://yandex.ru/maps/" target="_blank" rel="noopener" class="btn-dark">
+                            Построить маршрут
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Map Placeholder -->
+                <div class="reveal-right">
+                    <div class="map-placeholder aspect-[4/3] flex items-center justify-center relative">
+                        <!-- Grid pattern -->
+                        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(27,58,45,1) 1px, transparent 1px), linear-gradient(90deg, rgba(27,58,45,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+                        <!-- River line -->
+                        <svg class="absolute w-full h-full" viewBox="0 0 400 300" fill="none" preserveAspectRatio="none">
+                            <path d="M0 180 Q100 160 200 175 Q300 190 400 170" stroke="rgba(27,58,45,0.1)" stroke-width="40" fill="none"/>
+                            <path d="M0 180 Q100 160 200 175 Q300 190 400 170" stroke="rgba(27,58,45,0.05)" stroke-width="80" fill="none"/>
+                        </svg>
+
+                        <!-- Pin -->
+                        <div class="relative z-10 text-center">
+                            <div class="map-pin inline-block mb-4">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="#B8774E" stroke="#96603D" stroke-width="0.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3" fill="#FAF8F5" stroke="none"/>
+                                </svg>
+                            </div>
+                            <div class="text-charcoal/60 text-sm font-inter font-medium">Николина Гора</div>
+                            <div class="text-charcoal/30 text-xs mt-1 font-inter">55.7297, 37.0164</div>
+                            <div class="mt-4">
+                                <span class="inline-block bg-forest/5 text-forest text-xs px-4 py-2 rounded-full font-inter">
+                                    Яндекс Карта будет здесь
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== ALL SEASON ==================== -->
+    <section id="allseason" class="py-24 md:py-32 lg:py-40 relative overflow-hidden" style="background: linear-gradient(135deg, #1B3A2D 0%, #2A5440 50%, #1B3A2D 100%);">
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <div class="reveal">
+                <span class="inline-flex items-center gap-3 text-sand/40 text-xs tracking-[0.3em] font-inter font-medium uppercase mb-6">
+                    <span class="w-8 h-[1px] bg-sand/20"></span>
+                    Круглый год
+                    <span class="w-8 h-[1px] bg-sand/20"></span>
+                </span>
+            </div>
+
+            <h2 class="font-playfair text-4xl md:text-5xl lg:text-6xl text-warm-white font-semibold mb-6 leading-tight reveal">
+                365 дней в году.<br>
+                <span class="italic text-copper-light">Без перерывов.</span>
+            </h2>
+
+            <div class="flex justify-center mb-8 reveal">
+                <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-copper/40 to-transparent"></div>
+            </div>
+
+            <p class="text-sand/50 text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10 reveal">
+                DIP PADEL — утеплённые крытые корты с системой обогрева. Играйте в любую погоду: летом с панорамой на реку, зимой в комфортном тепле. Падел на Николиной Горе — круглый год.
+            </p>
+
+            <!-- All-season features -->
+            <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto mb-12 reveal">
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-warm-white/5 border border-warm-white/10 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(232,222,209,0.5)" stroke-width="1.2" stroke-linecap="round">
+                            <path d="M12 3v1m0 16v1m-8-9H3m18 0h-1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="text-warm-white/40 text-xs tracking-wider">Обогрев</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-warm-white/5 border border-warm-white/10 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(232,222,209,0.5)" stroke-width="1.2" stroke-linecap="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <div class="text-warm-white/40 text-xs tracking-wider">Крытые корты</div>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-warm-white/5 border border-warm-white/10 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(232,222,209,0.5)" stroke-width="1.2" stroke-linecap="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="text-warm-white/40 text-xs tracking-wider">365 дней</div>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <a href="#booking" class="btn-primary">
+                    <span>Забронировать корт</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== BOOKING ==================== -->
+    <section id="booking" class="py-24 md:py-32 lg:py-40 bg-warm-white relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-forest/[0.02] hidden lg:block"></div>
+        <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-copper/[0.03] hidden lg:block"></div>
+
+        <div class="max-w-6xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-20">
+                <!-- Left: Form -->
+                <div>
+                    <span class="section-label reveal">Бронирование</span>
+                    <h2 class="section-heading text-4xl md:text-5xl text-charcoal mt-4 mb-3 reveal">
+                        Забронировать <span class="text-forest">корт</span>
+                    </h2>
+                    <div class="section-divider mb-10 reveal"></div>
+
+                    <form id="bookingForm" class="space-y-6 reveal" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="form-label" for="booking-name">Ваше имя</label>
+                            <input id="booking-name" type="text" class="form-input" placeholder="Александр" required>
+                        </div>
+                        <div>
+                            <label class="form-label" for="booking-phone">Телефон</label>
+                            <input id="booking-phone" type="tel" class="form-input" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label" for="booking-date">Дата</label>
+                                <input id="booking-date" type="date" class="form-input" required>
+                            </div>
+                            <div>
+                                <label class="form-label" for="booking-time">Время</label>
+                                <select id="booking-time" class="form-input" required>
+                                    <option value="" disabled selected>Выберите</option>
+                                    <option value="morning">Утро (7:00-12:00)</option>
+                                    <option value="afternoon">День (12:00-17:00)</option>
+                                    <option value="evening">Вечер (17:00-22:00)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label" for="booking-comment">Комментарий <span class="font-normal text-charcoal-light/40">(необязательно)</span></label>
+                            <textarea id="booking-comment" class="form-input" rows="3" placeholder="Пожелания, количество игроков..."></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn-primary w-full justify-center !py-4">
+                            <span id="submitBtnText">Отправить заявку</span>
+                            <span id="submitBtnIcon" style="position:relative;z-index:1;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <p class="text-charcoal-light/40 text-xs text-center">
+                            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Right: Contact Info -->
+                <div class="lg:pl-8">
+                    <div class="reveal-right">
+                        <!-- Telegram card -->
+                        <div class="bg-forest rounded-3xl p-10 mb-8 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-40 h-40 rounded-full bg-warm-white/[0.03] translate-x-10 -translate-y-10"></div>
+                            <div class="relative z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-warm-white/10 flex items-center justify-center mb-6 tg-pulse">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 5L2 12.5l7 1M21 5l-4 16-8-8.5M21 5L9 13.5M9 13.5V20l3.5-3.5" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3 class="font-playfair text-2xl text-warm-white font-semibold mb-2">Telegram</h3>
+                                <p class="text-warm-white/50 text-sm mb-6 leading-relaxed">
+                                    Быстрое бронирование и ответы на вопросы в Telegram
+                                </p>
+                                <a href="https://t.me/dippadel" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-warm-white/10 hover:bg-warm-white/15 text-warm-white px-6 py-3 rounded-full text-sm font-medium transition-colors duration-300">
+                                    @dippadel
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Phone card -->
+                        <div class="bg-sand/40 rounded-3xl p-10 border border-sand/60">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 rounded-2xl bg-forest/5 flex items-center justify-center flex-shrink-0">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B3A2D" stroke-width="1.5" stroke-linecap="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-charcoal mb-1">Позвоните нам</h4>
+                                    <p class="text-charcoal-light/50 text-sm mb-3">Ежедневно с 7:00 до 22:00</p>
+                                    <a href="tel:+79991234567" class="text-forest font-semibold text-lg hover:text-copper transition-colors duration-300">
+                                        +7 (999) 123-45-67
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Working hours -->
+                        <div class="mt-8 px-2">
+                            <h4 class="font-semibold text-charcoal text-sm mb-4 tracking-wide">Режим работы</h4>
+                            <div class="grid grid-cols-2 gap-3 text-sm">
+                                <div class="text-charcoal-light/50">Понедельник &ndash; Пятница</div>
+                                <div class="text-charcoal font-medium text-right">7:00 &ndash; 22:00</div>
+                                <div class="text-charcoal-light/50">Суббота &ndash; Воскресенье</div>
+                                <div class="text-charcoal font-medium text-right">8:00 &ndash; 22:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-charcoal pt-20 pb-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-copper/20 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-3 gap-16 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="#hero" class="flex items-center gap-3 group mb-6">
+                        <div class="w-10 h-10 rounded-full border border-copper/30 flex items-center justify-center group-hover:border-copper/60 transition-colors duration-300">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#B8774E" stroke-width="1.5"/>
+                                <path d="M8 12h8M12 8v8" stroke="#B8774E" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-warm-white font-playfair text-lg tracking-widest font-medium">DIP PADEL</span>
+                    </a>
+                    <p class="text-warm-white/30 text-sm leading-relaxed max-w-xs">
+                        Премиальные падел-корты на берегу Москвы-реки. Дипломатический пляж, Николина Гора.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-warm-white/50 text-xs tracking-[0.2em] uppercase font-semibold mb-6">Навигация</h4>
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-8">
+                        <a href="#about" class="footer-link text-sm">О клубе</a>
+                        <a href="#courts" class="footer-link text-sm">Корты</a>
+                        <a href="#pricing" class="footer-link text-sm">Цены</a>
+                        <a href="#coaches" class="footer-link text-sm">Тренеры</a>
+                        <a href="#location" class="footer-link text-sm">Локация</a>
+                        <a href="#booking" class="footer-link text-sm">Бронирование</a>
+                    </div>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="text-warm-white/50 text-xs tracking-[0.2em] uppercase font-semibold mb-6">Социальные сети</h4>
+                    <div class="flex gap-3">
+                        <!-- Telegram -->
+                        <a href="https://t.me/dippadel" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 5L2 12.5l7 1M21 5l-4 16-8-8.5M21 5L9 13.5M9 13.5V20l3.5-3.5"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                        <!-- VK -->
+                        <a href="#" class="social-icon" aria-label="VKontakte">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.785 16.241s.288-.032.436-.192c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.596-.188 1.362 1.26 2.174 1.817.614.42 1.08.328 1.08.328l2.172-.03s1.136-.07.598-.964c-.044-.073-.314-.661-1.618-1.869-1.366-1.264-1.183-1.06.462-3.246.998-1.328 1.398-2.14 1.273-2.487-.12-.332-.856-.244-.856-.244l-2.454.015s-.182-.025-.317.056c-.132.079-.217.264-.217.264s-.39 1.038-.909 1.92c-1.096 1.863-1.534 1.962-1.713 1.846-.416-.27-.312-1.082-.312-1.66 0-1.804.274-2.556-.532-2.75-.268-.065-.464-.107-1.147-.114-.876-.009-1.616.003-2.036.208-.28.137-.496.44-.364.458.162.021.53.099.725.364.252.342.243 1.11.243 1.11s.145 2.124-.338 2.386c-.331.18-.786-.187-1.762-1.868-.5-.86-.878-1.81-.878-1.81s-.073-.178-.203-.274c-.158-.116-.378-.153-.378-.153l-2.334.015s-.35.01-.479.162c-.114.135-.009.414-.009.414s1.832 4.29 3.908 6.449c1.902 1.98 4.063 1.85 4.063 1.85h.98z"/>
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="#" class="social-icon" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-warm-white/[0.06] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-warm-white/20 text-xs tracking-wider">
+                    &copy; DIP PADEL 2026. Николина Гора. Все права защищены.
+                </p>
+                <p class="text-warm-white/20 text-xs tracking-wider">
+                    <a href="https://dippadel.ru" class="footer-link text-xs">dippadel.ru</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // ===== Navigation scroll effect =====
+        (function() {
+            var navbar = document.getElementById('navbar');
+
+            function handleNavScroll() {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', handleNavScroll, { passive: true });
+        })();
+
+
+        // ===== Mobile menu =====
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobileMenu');
+            var hamburger = document.getElementById('hamburger');
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            var menu = document.getElementById('mobileMenu');
+            var hamburger = document.getElementById('hamburger');
+            menu.classList.remove('open');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+
+        // ===== Scroll Reveal =====
+        function initScrollReveal() {
+            var elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -60px 0px'
+            });
+
+            elements.forEach(function(el) { observer.observe(el); });
+        }
+
+
+        // ===== Counter Animation =====
+        function initCounters() {
+            var counters = document.querySelectorAll('.count-up');
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
+                        var target = parseInt(el.getAttribute('data-target'), 10);
+                        var duration = 2000;
+                        var step = target / (duration / 16);
+                        var current = 0;
+
+                        function updateCounter() {
+                            current += step;
+                            if (current < target) {
+                                el.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                el.textContent = target;
+                            }
+                        }
+
+                        updateCounter();
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(function(el) { observer.observe(el); });
+        }
+
+
+        // ===== Parallax on hero geometric elements =====
+        function initParallax() {
+            var elements = document.querySelectorAll('.parallax-slow');
+
+            window.addEventListener('scroll', function() {
+                var scrollY = window.scrollY;
+                elements.forEach(function(el) {
+                    var speed = parseFloat(el.getAttribute('data-speed')) || 0.03;
+                    el.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
+                });
+            }, { passive: true });
+        }
+
+
+        // ===== Hero Particles =====
+        function initParticles() {
+            var container = document.getElementById('particles');
+            var count = window.innerWidth < 768 ? 15 : 30;
+
+            for (var i = 0; i < count; i++) {
+                var particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDuration = (8 + Math.random() * 12) + 's';
+                particle.style.animationDelay = (Math.random() * 10) + 's';
+                var size = (1 + Math.random() * 2) + 'px';
+                particle.style.width = size;
+                particle.style.height = size;
+                container.appendChild(particle);
+            }
+        }
+
+
+        // ===== Winter Snowflakes =====
+        function initSnowflakes() {
+            var container = document.getElementById('snowflakes');
+            if (!container) return;
+            var symbols = ['\u2022', '\u2219', '\u00B7'];
+            var count = window.innerWidth < 768 ? 10 : 20;
+
+            for (var i = 0; i < count; i++) {
+                var flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                flake.style.left = Math.random() * 100 + '%';
+                flake.style.animationDuration = (6 + Math.random() * 8) + 's';
+                flake.style.animationDelay = (Math.random() * 8) + 's';
+                flake.style.fontSize = (8 + Math.random() * 12) + 'px';
+                container.appendChild(flake);
+            }
+        }
+
+
+        // ===== Form Submit =====
+        function handleSubmit(e) {
+            e.preventDefault();
+            var form = e.target;
+            var btn = document.getElementById('submitBtn');
+            var btnText = document.getElementById('submitBtnText');
+            var btnIcon = document.getElementById('submitBtnIcon');
+
+            var originalText = btnText.textContent;
+            btnText.textContent = 'Отправлено!';
+            btnIcon.style.display = 'none';
+            btn.classList.add('btn-success');
+            btn.style.pointerEvents = 'none';
+
+            setTimeout(function() {
+                btnText.textContent = originalText;
+                btnIcon.style.display = '';
+                btn.classList.remove('btn-success');
+                btn.style.pointerEvents = '';
+                form.reset();
+            }, 3000);
+        }
+
+
+        // ===== Smooth scroll for anchor links =====
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetEl = document.querySelector(this.getAttribute('href'));
+                if (targetEl) {
+                    var offset = 80;
+                    var position = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({
+                        top: position,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
+        // ===== Initialize =====
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollReveal();
+            initCounters();
+            initParallax();
+            initParticles();
+            // snowflakes removed — padel works year-round
+        });
+    </script>
+</body>
+</html>

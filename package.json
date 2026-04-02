@@ -1,0 +1,9 @@
+{
+  "name": "dippadel",
+  "version": "1.0.0",
+  "description": "DIP PADEL — Premium padel courts at Nikolina Gora",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
