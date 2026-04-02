@@ -23,6 +23,14 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://dippadel.ru">
 
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1B3A2D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DIP PADEL">
+    <link rel="apple-touch-icon" href="images/icon-180.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,6 +74,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 88px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -847,7 +856,7 @@
                     <a href="#pricing" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Цены</a>
                     <a href="#coaches" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Тренеры</a>
                     <a href="#location" class="nav-link text-warm-white/70 text-sm tracking-wider font-light hover:text-warm-white">Локация</a>
-                    <a href="#booking" class="btn-primary !py-3 !px-7 !text-xs !tracking-widest">
+                    <a href="https://t.me/dippadel_bot" target="_blank" rel="noopener" class="btn-primary !py-3 !px-7 !text-xs !tracking-widest">
                         <span>ЗАБРОНИРОВАТЬ</span>
                     </a>
                 </div>
@@ -914,7 +923,7 @@
 
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-5 opacity-0" style="animation: fadeSlideUp 1s 1.1s forwards;">
-                <a href="#booking" class="btn-primary">
+                <a href="https://t.me/dippadel_bot" target="_blank" rel="noopener" class="btn-primary">
                     <span>Забронировать корт</span>
                     <span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="position:relative;z-index:1;">
@@ -1556,7 +1565,7 @@
             </div>
 
             <div class="reveal">
-                <a href="#booking" class="btn-primary">
+                <a href="https://t.me/dippadel_bot" target="_blank" rel="noopener" class="btn-primary">
                     <span>Забронировать корт</span>
                 </a>
             </div>
@@ -1722,13 +1731,13 @@
                     <h4 class="text-warm-white/50 text-xs tracking-[0.2em] uppercase font-semibold mb-6">Социальные сети</h4>
                     <div class="flex gap-3">
                         <!-- Telegram -->
-                        <a href="https://t.me/dippadel" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
+                        <a href="https://t.me/dippadel_bot" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 5L2 12.5l7 1M21 5l-4 16-8-8.5M21 5L9 13.5M9 13.5V20l3.5-3.5"/>
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="#" class="social-icon" aria-label="Instagram">
+                        <a href="https://www.instagram.com/dippadel" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5"/>
                                 <circle cx="12" cy="12" r="5"/>
@@ -1915,19 +1924,57 @@
             var btnText = document.getElementById('submitBtnText');
             var btnIcon = document.getElementById('submitBtnIcon');
 
-            var originalText = btnText.textContent;
-            btnText.textContent = 'Отправлено!';
-            btnIcon.style.display = 'none';
-            btn.classList.add('btn-success');
-            btn.style.pointerEvents = 'none';
+            var name = document.getElementById('booking-name').value;
+            var phone = document.getElementById('booking-phone').value;
+            var date = document.getElementById('booking-date').value;
+            var time = document.getElementById('booking-time').value;
+            var comment = document.getElementById('booking-comment').value;
 
-            setTimeout(function() {
-                btnText.textContent = originalText;
-                btnIcon.style.display = '';
-                btn.classList.remove('btn-success');
-                btn.style.pointerEvents = '';
-                form.reset();
-            }, 3000);
+            var timeLabels = {morning: 'Утро (7-12)', afternoon: 'День (12-17)', evening: 'Вечер (17-22)'};
+            var text = '🎾 *Новая заявка с сайта dippadel.ru*\n\n'
+                + '👤 Имя: ' + name + '\n'
+                + '📱 Телефон: ' + phone + '\n'
+                + '📅 Дата: ' + date + '\n'
+                + '🕐 Время: ' + (timeLabels[time] || time) + '\n'
+                + (comment ? '💬 Комментарий: ' + comment + '\n' : '');
+
+            var BOT_TOKEN = '8651430161:AAHSbYldWyVMYcb6ZUc3TxAWmJeTokREcag';
+            var CHAT_ID = window.DIPPADEL_ADMIN_CHAT_ID || '';
+
+            btn.style.pointerEvents = 'none';
+            btnText.textContent = 'Отправка...';
+
+            if (!CHAT_ID) {
+                // Fallback: open bot in Telegram with pre-filled message
+                window.open('https://t.me/dippadel_bot?start=book', '_blank');
+                btnText.textContent = 'Перейдите в Telegram';
+                setTimeout(function() { btnText.textContent = 'Отправить заявку'; btn.style.pointerEvents = ''; }, 3000);
+                return;
+            }
+
+            fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({chat_id: CHAT_ID, text: text, parse_mode: 'Markdown'})
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.ok) {
+                    btnText.textContent = 'Отправлено! ✓';
+                    btnIcon.style.display = 'none';
+                    btn.classList.add('btn-success');
+                    form.reset();
+                } else {
+                    window.open('https://t.me/dippadel_bot?start=book', '_blank');
+                    btnText.textContent = 'Перейдите в Telegram';
+                }
+                setTimeout(function() { btnText.textContent = 'Отправить заявку'; btnIcon.style.display = ''; btn.classList.remove('btn-success'); btn.style.pointerEvents = ''; }, 3000);
+            })
+            .catch(function() {
+                window.open('https://t.me/dippadel_bot?start=book', '_blank');
+                btnText.textContent = 'Перейдите в Telegram';
+                setTimeout(function() { btnText.textContent = 'Отправить заявку'; btn.style.pointerEvents = ''; }, 3000);
+            });
         }
 
 
@@ -1935,13 +1982,19 @@
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                var targetEl = document.querySelector(this.getAttribute('href'));
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                var targetEl = document.querySelector(href);
                 if (targetEl) {
-                    var offset = 80;
-                    var position = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-                    window.scrollTo({
-                        top: position,
-                        behavior: 'smooth'
+                    // Close mobile menu first, then scroll after repaint
+                    closeMobileMenu();
+                    requestAnimationFrame(function() {
+                        var navHeight = document.getElementById('navbar').offsetHeight;
+                        var position = targetEl.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+                        window.scrollTo({
+                            top: Math.max(0, position),
+                            behavior: 'smooth'
+                        });
                     });
                 }
             });
@@ -1955,6 +2008,7 @@
             initParallax();
             initParticles();
             // snowflakes removed — padel works year-round
+            if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
         });
     </script>
 </body>
