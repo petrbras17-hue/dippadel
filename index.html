@@ -324,10 +324,10 @@
             background: url('images/aerial.jpg') center/cover no-repeat;
         }
         .court-gradient-3 {
-            background: linear-gradient(135deg, #B8774E 0%, #96603D 40%, #1B3A2D 100%);
+            background: url('images/court_sunset.jpg') center/cover no-repeat, linear-gradient(135deg, #B8774E 0%, #96603D 40%, #1B3A2D 100%);
         }
         .court-gradient-4 {
-            background: linear-gradient(135deg, #1B3A2D 0%, #B8774E 60%, #D4956A 100%);
+            background: url('images/court_vip.jpg') center/cover no-repeat, linear-gradient(135deg, #1B3A2D 0%, #B8774E 60%, #D4956A 100%);
         }
 
         .court-lines {
@@ -980,7 +980,7 @@
                 <div class="reveal-right">
                     <div class="relative bg-sand/40 rounded-3xl p-10 border border-sand">
                         <!-- Decorative court shape -->
-                        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-forest to-forest-light relative overflow-hidden mb-10">
+                        <div class="aspect-[4/3] rounded-2xl relative overflow-hidden mb-10" style="background: url('images/aerial.jpg') center/cover no-repeat;">
                             <div class="absolute inset-6 border border-warm-white/10 rounded-lg"></div>
                             <div class="absolute top-6 bottom-6 left-1/2 w-[1px] bg-warm-white/10"></div>
                             <div class="absolute top-1/2 left-6 right-6 h-[1px] -translate-y-1/2" style="background: repeating-linear-gradient(90deg, rgba(250,248,245,0.1) 0px, rgba(250,248,245,0.1) 6px, transparent 6px, transparent 12px);"></div>
@@ -1489,32 +1489,8 @@
 
                 <!-- Right: Map Placeholder -->
                 <div class="reveal-right">
-                    <div class="map-placeholder aspect-[4/3] flex items-center justify-center relative">
-                        <!-- Grid pattern -->
-                        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(27,58,45,1) 1px, transparent 1px), linear-gradient(90deg, rgba(27,58,45,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
-
-                        <!-- River line -->
-                        <svg class="absolute w-full h-full" viewBox="0 0 400 300" fill="none" preserveAspectRatio="none">
-                            <path d="M0 180 Q100 160 200 175 Q300 190 400 170" stroke="rgba(27,58,45,0.1)" stroke-width="40" fill="none"/>
-                            <path d="M0 180 Q100 160 200 175 Q300 190 400 170" stroke="rgba(27,58,45,0.05)" stroke-width="80" fill="none"/>
-                        </svg>
-
-                        <!-- Pin -->
-                        <div class="relative z-10 text-center">
-                            <div class="map-pin inline-block mb-4">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="#B8774E" stroke="#96603D" stroke-width="0.5">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3" fill="#FAF8F5" stroke="none"/>
-                                </svg>
-                            </div>
-                            <div class="text-charcoal/60 text-sm font-inter font-medium">Николина Гора</div>
-                            <div class="text-charcoal/30 text-xs mt-1 font-inter">55.7297, 37.0164</div>
-                            <div class="mt-4">
-                                <span class="inline-block bg-forest/5 text-forest text-xs px-4 py-2 rounded-full font-inter">
-                                    Яндекс Карта будет здесь
-                                </span>
-                            </div>
-                        </div>
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=36.8647%2C55.7297&z=14&l=sat%2Cskl&pt=36.8647%2C55.7297%2Cpm2gnm" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 8px;" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -1662,8 +1638,8 @@
                                 <p class="text-warm-white/50 text-sm mb-6 leading-relaxed">
                                     Быстрое бронирование и ответы на вопросы в Telegram
                                 </p>
-                                <a href="https://t.me/dippadel" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-warm-white/10 hover:bg-warm-white/15 text-warm-white px-6 py-3 rounded-full text-sm font-medium transition-colors duration-300">
-                                    @dippadel
+                                <a href="https://t.me/dippadel_bot" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-warm-white/10 hover:bg-warm-white/15 text-warm-white px-6 py-3 rounded-full text-sm font-medium transition-colors duration-300 mb-3">
+                                    Забронировать через бот
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
                                     </svg>
