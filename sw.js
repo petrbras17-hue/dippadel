@@ -1,4 +1,4 @@
-const CACHE = 'dippadel-v1';
+const CACHE = 'dippadel-v2';
 const ASSETS = ['/', '/index.html', '/images/hero.jpg'];
 
 self.addEventListener('install', e => {
